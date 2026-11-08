@@ -22,18 +22,18 @@ CREATE TABLE GeoIPCache (
 
 CREATE TABLE ProductDescription (
     ID INT,
-    CountryID INT,
-    ProductID INT,
     Description VARCHAR(100),
+    ProductID INT,
+    CountryID INT,
     PRIMARY KEY (ID)
-) ENGINE=MyISAM;
+) ENGINE=InnoDB;
 
 -- Create a table for storing logs. For now we don't need to save them, but we need to implement functionality (Columns: ID, Time, LogRecord)
 
 CREATE TABLE Logs (
     ID INT,
-    Time TIMESTAMP,
-    LogRecord VARCHAR(100),
+    Timestamp TIMESTAMP,
+    Message VARCHAR(100),
     PRIMARY KEY (ID)
 ) ENGINE=BLACKHOLE;
 
